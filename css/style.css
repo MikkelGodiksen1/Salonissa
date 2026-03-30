@@ -225,11 +225,19 @@ h3 {
   text-decoration: none;
 }
 .nav__logo-img {
-  height: 36px;
+  height: 44px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
-  transition: filter var(--dur-fast);
+  transition: filter var(--dur-fast), transform 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+.nav__logo-img:hover {
+  transform: scale(1.08);
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 .nav.scrolled .nav__logo-img { filter: none; }
 
