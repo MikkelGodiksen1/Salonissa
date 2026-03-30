@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priser — Salon Issa</title>
+  <meta name="description" content="Se priser for herreklip, børneklip, pensionist, hårvask og barbering hos Salon Issa på Amager. Kvalitet til fair priser.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <style>
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      .price-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .price-card {
+      background: var(--c-bg-alt, #1a1a1a);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+    .price-card__title {
+      font-family: var(--f-serif, 'DM Serif Display', serif);
+      font-size: 1.35rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--c-warm, #c9a96e);
+      color: var(--c-ink, #f0ece4);
+    }
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.95rem;
+      color: var(--c-ink, #f0ece4);
+    }
+    .price-item:last-child {
+      border-bottom: none;
+    }
+    .price-item__name {
+      flex: 1;
+      padding-right: 1rem;
+    }
+    .price-item__cost {
+      font-weight: 600;
+      white-space: nowrap;
+      color: var(--c-warm, #c9a96e);
+    }
+    .price-note {
+      background: rgba(201,169,110,0.08);
+      border-left: 4px solid var(--c-warm, #c9a96e);
+      border-radius: 0.5rem;
+      padding: 1.5rem 2rem;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--c-ink-soft, #a8a49c);
+    }
+    .price-note strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 1rem;
+      color: var(--c-ink, #f0ece4);
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Hjem",
+        "item": "https://www.salonissa.dk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Priser",
+        "item": "https://www.salonissa.dk/priser"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="index.html" class="nav__logo">
+      <img src="images/logo.png" alt="Salon Issa" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Forside</a></li>
+      <li><a href="priser.html">Priser</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="https://api.leadconnectorhq.com/widget/booking/WOASwSYP6bgsuw20f8Hr" target="_blank" class="nav__cta">Book tid</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav__mobile">
+  <a href="index.html">Forside</a>
+  <a href="priser.html">Priser</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="https://api.leadconnectorhq.com/widget/booking/WOASwSYP6bgsuw20f8Hr" target="_blank" class="nav__cta">Book tid</a>
+</nav>
+
+<nav class="breadcrumb container" aria-label="Breadcrumb">
+  <ol class="breadcrumb__list">
+    <li><a href="index.html">Hjem</a></li>
+    <li aria-current="page">Priser</li>
+  </ol>
+</nav>
+
+<section class="service-hero reveal">
+  <div class="container">
+    <span class="section-label">PRISLISTE</span>
+    <h1>Vores priser</h1>
+    <p>Kvalitet til fair priser. Alle priser er vejledende — kontakt os for præcis pris.</p>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="container">
+    <div class="price-grid" style="max-width:600px;">
+
+      <div class="price-card" style="grid-column: 1 / -1;">
+        <h2 class="price-card__title">Prisliste</h2>
+        <div class="price-item">
+          <span class="price-item__name">Herreklip</span>
+          <span class="price-item__cost">200 kr</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">Børneklip</span>
+          <span class="price-item__cost">150 kr</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">Pensionist</span>
+          <span class="price-item__cost">150 kr</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">Hårvask</span>
+          <span class="price-item__cost">50 kr</span>
+        </div>
+        <div class="price-item">
+          <span class="price-item__name">Barbering</span>
+          <span class="price-item__cost">100 kr</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="price-note">
+      <strong>Bemærk</strong>
+      Priserne er vejledende. Ring til os for at høre den præcise pris for din behandling. Vi tager MobilePay og kontant.
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" style="text-align:center;padding-bottom:4rem;">
+  <div class="container">
+    <h2 style="font-family:var(--f-serif);margin-bottom:0.5rem;">Klar til en tid?</h2>
+    <p style="margin-bottom:1.5rem;color:var(--c-ink-soft);">Book din tid online — hurtigt og nemt.</p>
+    <a href="https://api.leadconnectorhq.com/widget/booking/WOASwSYP6bgsuw20f8Hr" target="_blank" class="btn btn--primary">Book tid nu</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__brand">
+      <img src="images/logo.png" alt="Salon Issa" style="height:60px;width:auto;margin-bottom:0.5rem;">
+      <p>Din frisør på Amager. Professionel klipning og styling for hele familien.</p>
+    </div>
+    <div class="footer__links">
+      <a href="index.html">Forside</a>
+      <a href="priser.html">Priser</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="footer__payment">
+      <span class="footer__payment-label">Find os</span>
+      <p style="font-size:0.9rem;color:var(--c-ink-soft);line-height:1.6">Englandsvej 10<br>2300 København S</p>
+      <p style="font-size:0.9rem"><a href="tel:+4542402549" style="color:var(--c-ink-soft)">42 40 25 49</a></p>
+    </div>
+    <p class="footer__copy">&copy; 2026 Salon Issa. Alle rettigheder forbeholdes.</p>
+  </div>
+</footer>
+
+<div class="fab-group">
+  <a href="tel:+4542402549" class="fab fab--phone">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>42 40 25 49</span>
+  </a>
+</div>
+
+<script src="js/main.js?v=2" defer></script>
+</body>
+</html>
