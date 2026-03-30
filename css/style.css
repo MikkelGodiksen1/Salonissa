@@ -224,22 +224,23 @@ h3 {
   gap: 0.75rem;
   text-decoration: none;
 }
-.nav__logo {
-  animation: float 3s ease-in-out infinite;
-}
 .nav__logo-img {
   height: 44px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
-  transition: filter var(--dur-fast), transform 0.3s ease;
+  transition: filter var(--dur-fast);
+  animation: logoFloat 3s ease-in-out infinite;
 }
-.nav__logo:hover .nav__logo-img {
-  transform: scale(1.1);
+.nav__logo-img:hover {
+  animation: logoFloat 3s ease-in-out infinite, logoPulse 0.3s ease forwards;
 }
-@keyframes float {
+@keyframes logoFloat {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes logoPulse {
+  to { transform: scale(1.1); }
 }
 .nav.scrolled .nav__logo-img { filter: none; }
 
